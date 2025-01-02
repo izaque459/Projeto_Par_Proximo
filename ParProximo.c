@@ -37,12 +37,27 @@ Pair closestPairBaseCase(Point P[], int n) {
     return closest;
 }
 
-Pair ClosestPair(P [],int n)
+Pair closestPair(Point P[],int n)
 {
 	if (n<= 3)
 	{
 		return closestPairBaseCase(P, n);
 	}
 		
+	
+}
+
+
+int main()
+{
+	Point points[] = {{2, 3}, {12, 30}, {40, 50}};
+    int n = sizeof(points) / sizeof(points[0]);
+	
+	Pair closest = closestPair(points, n);
+	
+	printf("O par de pontos mais proximo eh: (%d, %d) e (%d, %d)\n", closest.p1.x, closest.p1.y, closest.p2.x, closest.p2.y);
+
+    return 0;
+	
 	
 }
