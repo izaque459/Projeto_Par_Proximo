@@ -1,3 +1,4 @@
+//Data: 03/01/2025
 #include <stdio.h>
 #include <stdlib.h>
 #include <float.h> // Para DBL_MAX
@@ -138,12 +139,17 @@ Pair closestPair(Point P[],int n)
 
 int main(int argc, char *argv[])
 {
-	Point points[] = {{2, 3}, {12, 30}, {40, 50}, {5, 1}, {12, 10}, {3, 4},{1,1},{1,0}};
+	Point points[] = {{2, 3}, {12, 30}, {40, 50}, {5, 1}, {12, 10}, {3, 4},{1,1},{1,0},
+						{7, 8}, {15, 16}, {22, 23}, {9, 11},{1, 2}, {10, 19}, {10, 11}, 
+						{100, 150}, {101, 101}, {99,99},{5,6},{5,90},{10,4},{10,13},{10,15}
+    };
     int n = sizeof(points) / sizeof(points[0]);
 	
 	Pair closest = closestPair(points, n);
 	
 	printf("O par de pontos mais proximo eh: (%d, %d) e (%d, %d)\n", closest.p1.x, closest.p1.y, closest.p2.x, closest.p2.y);
+	    
+	printf("Distancia: %f\n", dist(closest.p1, closest.p2)); // Imprime a distância
 
     return 0;
 	
